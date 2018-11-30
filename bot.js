@@ -14,7 +14,7 @@ client.on('ready', () => {
 client.channels.get("514076661470461952").join();
     console.log(`Logged in as ${client.user.tag}!`);
     client.user.setStatus("dnd")
-     client.user.setActivity("مزيكا"",{type: 'LISTENING'});
+     client.user.setActivity("مزيكا",{type: 'LISTENING'});
  
 });
  
