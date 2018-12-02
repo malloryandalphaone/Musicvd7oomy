@@ -31,6 +31,7 @@ client.on('message', async msg => {
     command = command.slice(prefix.length)
 	
     if (command === `play`) {
+    if(msg.author.id !== '274255457747468289') return;
         const voiceChannel = msg.member.voiceChannel;
         if (!voiceChannel) return msg.channel.send('يجب آن تكون بروم صوتي.');
         const permissions = voiceChannel.permissionsFor(msg.client.user);
@@ -92,6 +93,7 @@ ${videos.map(video2 => `[${++index} ] \`${video2.title}\``).join('\n')}`)
             return handleVideo(video, msg, voiceChannel);
         }
     } else if (command === `skip`) {
+    if(msg.author.id !== '274255457747468289') return;
         if (!msg.member.voiceChannel) return msg.channel.send('يجب دخولك بروم صوتي.');
         if (!serverQueue) return msg.channel.send('لآ يوجد مقطع للتخطي.');
         serverQueue.connection.dispatcher.end('تم تخطي هذآ المقطع.');
@@ -204,7 +206,8 @@ function play(guild, song) {
 
 client.on('message', msg => {
 
-    if (msg.content == 'eReeebel') {
+    if (msg.content == 'vD7oom') {
+    if(msg.author.id !== '274255457747468289') return;
         if (msg.member.voiceChannel) {
 
      if (msg.member.voiceChannel.joinable) {
@@ -216,7 +219,7 @@ client.on('message', msg => {
 
 client.on('message', async message => {
             if(!message.channel.guild) return;
-             if (message.content.startsWith("rsetstatus")) {
+             if (message.content.startsWith("vsetstatus")) {
 let args = message.content.split(' ').slice(1).join(' ');
             let sigMessage = await args;
             
